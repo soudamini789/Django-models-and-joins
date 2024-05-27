@@ -5,9 +5,6 @@ from django.db import models
 class topic(models.Model):
     topic_name=models.CharField(max_length=100,primary_key=True)
     email=models.EmailField(default='mini@gmail.com')
-    
-
-
 
     def __str__(self):
         return self.topic_name    
@@ -19,7 +16,6 @@ class webpage(models.Model):
 
     def __str__(self):
         return self.name    
-
 
 class AccessRecords(models.Model):
     name=models.ForeignKey(webpage,on_delete=models.CASCADE)
@@ -40,7 +36,7 @@ class Dept(models.Model):
 
 class Emp(models.Model):
     empno=models.IntegerField()
-    ename=models.CharField(max_length=100,unique=True)
+    ename=models.CharField(max_length=100)
     job=models.CharField( max_length=50)
     mgr=models.ForeignKey('self',on_delete=models.SET_NULL,null=True,blank=True)#SET_NULL is used for setting the value null as when we delete mgr empno data should not be deleted
     hiredate=models.DateField()

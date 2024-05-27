@@ -23,4 +23,10 @@ urlpatterns = [
     path('insert_topic/',insert_topic,name='insert_topic'),
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
     path('insert_AccessRecords/',insert_AccessRecords,name='insert_AccessRecords'),
+    path('insert_Dept/',insert_Dept,name='insert_Dept'),
+    path('insert_Emp/',insert_Emp,name='insert_Emp'),
+    path('selfjoins/',selfjoins,name='selfjoins'),
+    path('innerequijoins/',innerequijoins,name='innerequijoins'),
+    #path('update/',update,name='update'),
+
 ]
